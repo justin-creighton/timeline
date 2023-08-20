@@ -1,0 +1,142 @@
+#timeline {
+  width: 8rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10rem;
+  z-index: 1;
+}
+
+#timeline .timeline-item > a {
+  font-family: "Oswald";
+  font-weight: bold;
+  color: #f7b442;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+#timeline .timeline-line {
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #f7b442;
+}
+
+#timeline .timeline-arrow {
+  position: absolute;
+  transform: rotateZ(90deg) translateY(42%) translateX(78%);
+  bottom: 0;
+  left: 0;
+  font-size: 2rem;
+  color: #858585;
+}
+
+.timeline-arrow-down {
+  font-size: 2rem;
+  color: #f7b442;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-arrow-up {
+  font-size: 2rem;
+  color: #f7b442;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.timeline-arrow-up:hover,
+.timeline-arrow-down:hover,
+.timeline-arrow-up:focus,
+.timeline-arrow-down:focus {
+  color: #f7b442;
+  font-size: 2.5rem;
+}
+
+.active-time {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  font-size: 3rem;
+  opacity: 1;
+  color: #f7b442 !important;
+  border-bottom: #f7b442 solid 2px;
+}
+
+.active-time a {
+  color: #f7b442 !important;
+}
+
+.inactive-time a {
+  color: #858585 !important;
+}
+
+.inactive-time {
+  width: 100%;
+  height: 2.5rem;
+  position: relative;
+  font-size: 1.6rem;
+  opacity: 1;
+  color: black !important;
+  border-bottom: #858585 solid 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  #timeline {
+    width: 6rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 10rem;
+  }
+
+  .active-time {
+    height: 3rem;
+    font-size: 2rem;
+  }
+
+  .inactive-time {
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  #timeline {
+    width: 4rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 10rem;
+  }
+
+  #timeline .timeline-line {
+    width: 2px;
+  }
+
+  #timeline .timeline-arrow {
+    transform: rotateZ(90deg) translateY(40%) translateX(78%);
+    font-size: 1.2rem;
+  }
+
+  #timeline .timeline-item a {
+    left: 0.5rem;
+  }
+
+  .active-time {
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .inactive-time {
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+}
